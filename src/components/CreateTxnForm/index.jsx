@@ -183,7 +183,7 @@ export default function CreateTxnForm({ getTxns }) {
           min={option.min}
         />
       ))}
-      <Button type="submit" title="Enviar" isLoading={isLoading} />
+      <Button type="submit" text="Enviar" isLoading={isLoading} />
     </form>
   );
 }
