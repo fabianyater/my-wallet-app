@@ -1,0 +1,45 @@
+.btn_filter{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 16px;
+  border-radius: 40px;
+  width: 142px;
+  border: none;
+  outline: none;
+  background-color: var(--secondary-color);
+  gap: 10px;
+  cursor: pointer;
+}
+
+.btn_icon{
+  height: 24px;
+  width: 24px;
+  color: var(--white-color);
+}
+
+.btn_filter span{
+  font-weight: 500;
+  font-size: 18px;
+  color: var(--secondary-text-color);
+}
+
+.btn_filter:hover{  
+  background-color: var(--primary-color);
+  border: 1px solid var(--secondary-color);
+  animation: pulse 1s infinite;
+  box-sizing: border-box;
+}
+
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.7);
+  }
+  70% {
+    box-shadow: 0 0 0 10px rgba(0, 0, 0, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+  }
+  
+}

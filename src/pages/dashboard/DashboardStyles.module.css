@@ -1,0 +1,72 @@
+.container {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto auto auto;
+  padding: 20px;
+  gap: 1rem;
+  height: 80vh;
+}
+
+.txn {
+  box-sizing: border-box;
+  background-color: var(--primary-color);
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 30px;
+}
+
+.pagination {
+  display: flex;
+  align-items: center;
+}
+
+@media screen and (min-width: 1024px) {
+  .container {
+    grid-template-columns: 373px 1fr;
+    grid-template-rows: auto;
+    padding: 50px 64px;
+    grid-template-areas: 
+      "select txn txn"
+      "create txn txn"
+      "create txn txn";
+  }
+
+  .left {
+    grid-area: select;
+  }
+
+  .right {
+    grid-area: create;
+  }
+
+  .txn {
+    grid-area: txn;
+  }
+}
+
+@media screen and (min-width: 1248px) {
+  .container {
+    grid-template-columns: 373px 1fr 373px;
+    grid-template-rows: auto;
+    padding: 50px 64px;
+    grid-template-areas: 
+      "select txn create"
+      "select txn create"
+      "select txn create";
+  }
+
+  .left {
+    grid-area: select;
+  }
+
+  .right {
+    grid-area: create;
+  }
+
+  .txn {
+    grid-area: txn;
+  }
+}
+

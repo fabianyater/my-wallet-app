@@ -1,0 +1,14 @@
+.select {
+  box-sizing: border-box;
+  width: 50%;
+  line-height: 1;
+  border: none;
+  height: 34px;
+  background-color: transparent;
+  /* background: url('https://api.iconify.design/mingcute/transfer-4-line.svg?color=white&width=27&height=27') no-repeat center right / contain; */
+  color: var(--secondary-text-color);
+  outline: none;
+ /*  -webkit-appearance: none; */
+  font-weight: 500;
+  font-size: 20px;
+}
