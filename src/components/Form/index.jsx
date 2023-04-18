@@ -17,7 +17,7 @@ export default function LoginForm() {
 
   const onSubmit = (data) => {
     setIsLoading(true);
-    const request = fetch(`${API_URL}/user/login`, {
+    const request = fetch(`${API_URL}/auth/login`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
