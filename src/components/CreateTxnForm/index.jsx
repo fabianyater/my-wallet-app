@@ -165,7 +165,7 @@ export default function CreateTxnForm({ getTxns }) {
           <option value={0}>Seleccionar categoría</option>
           {categories.map((category) => (
             <option key={category.categoryId} value={category.categoryId}>
-              {category.name}
+              {category.categoryName}
             </option>
           ))}
         </select>

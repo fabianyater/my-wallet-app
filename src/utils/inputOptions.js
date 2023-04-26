@@ -4,7 +4,7 @@ import transfer from "../images/transfer.png";
 
 export const transactionTypeOptions = [
   {
-    name: "transactionType",
+    name: "type",
     value: "income",
     label: "Ingreso",
     image: income,
@@ -12,7 +12,7 @@ export const transactionTypeOptions = [
     required: true,
   },
   {
-    name: "transactionType",
+    name: "type",
     value: "expense",
     label: "Gasto",
     image: expense,
@@ -20,7 +20,7 @@ export const transactionTypeOptions = [
     required: true
   },
   {
-    name: "transactionType",
+    name: "type",
     value: "transfer",
     label: "Transferir",
     image: transfer,
@@ -30,7 +30,7 @@ export const transactionTypeOptions = [
 
 export const transactionInputOptions = [
   {
-    name: "transactionAmount",
+    name: "amount",
     label: "Monto",
     type: "number",
     placeholder: "Ej: 20.000",
@@ -38,7 +38,7 @@ export const transactionInputOptions = [
     min: 0,
   },
   {
-    name: "transactionDescription",
+    name: "description",
     label: "Descripción",
     type: "text",
     placeholder: "Ej: Almuerzo en el trabajo",

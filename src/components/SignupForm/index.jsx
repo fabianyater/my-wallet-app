@@ -14,7 +14,7 @@ export default function SignupForm() {
   const navigate = useNavigate();
   const onSubmit = (data) => {
     setIsLoading(true);
-    const request = fetch(`${API_URL}/user/signup`, {
+    const request = fetch(`${API_URL}/users/signup`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

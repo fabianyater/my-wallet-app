@@ -52,25 +52,25 @@ export default function Table({ transactions }) {
             {transactions.length > 0 &&
               transactions.map((txn) => (
                 <tr key={txn.id}>
-                  <td>{txn.category.name}</td>
+                  <td>{txn.category.categoryName}</td>
                   <td className={styles.td_amount}>
                     <p
                       className={
-                        txn.transactionType === "expense"
+                        txn.type === "expense"
                           ? styles.red
                           : styles.green
                       }
                     >
                       {formatAmountByType(
-                        txn.transactionAmount,
-                        txn.transactionType
+                        txn.amount,
+                        txn.type
                       )}
                     </p>
                     {/* <td>{txn.transactionType === "income" ? "Ingreso" : "Gasto"}</td> */}
                   </td>
-                  <td>{formatDate(txn.transactionDate)}</td>
+                  <td>{formatDate(txn.date)}</td>
                   <td className={styles.td_desc}>
-                    {txn.transactionDescription}
+                    {txn.description}
                   </td>
                 </tr>
               ))}
