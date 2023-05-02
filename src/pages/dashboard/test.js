@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Button, Pagination, Table } from '@mui/material';
-import { API_URL } from '../../utils/env';
+import { API_URL_DEV } from '../../utils/env';
 import styles from "./DashboardStyles.module.css";
 
 
@@ -15,7 +15,7 @@ export default function TransactionsTable ({ auth }) {
 
   const fetchTxns = async () => {
     const response = await fetch(
-      `${API_URL}/transactions/account/${auth?.selectedAccountValue}?page=${page}&size=5`,
+      `${API_URL_DEV}/transactions/account/${auth?.selectedAccountValue}?page=${page}&size=5`,
       {
         headers: {
           Authorization: auth?.token,

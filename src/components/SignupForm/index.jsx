@@ -2,7 +2,7 @@ import { useState, } from "react";
 import { useForm } from "react-hook-form";
 import { Link, useNavigate } from "react-router-dom";
 
-import { API_URL } from "../../utils/env";
+import { API_URL_DEV } from "../../utils/env";
 import styles from "../Form/Form.module.css";
 import Button from "../Button";
 import Input from "../Input";
@@ -14,7 +14,7 @@ export default function SignupForm() {
   const navigate = useNavigate();
   const onSubmit = (data) => {
     setIsLoading(true);
-    const request = fetch(`${API_URL}/users/signup`, {
+    const request = fetch(`${API_URL_DEV}/users/signup`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

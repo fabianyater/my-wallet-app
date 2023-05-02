@@ -1,7 +1,7 @@
 import { useContext, useEffect } from "react";
 
 import { formatCurrency } from "../../utils/currencyFormat";
-import { API_URL } from "../../utils/env";
+import { API_URL_DEV } from "../../utils/env";
 
 import AuthContext from "../../context/AuthProvider";
 import Select from "../Select/index";
@@ -12,7 +12,7 @@ export default function BalanceCard( {accounts} ) {
 
   const getAccountBalance = async () => {
     const response = await fetch(
-      `${API_URL}/accounts/${auth?.selectedAccountValue}/balance`,
+      `${API_URL_DEV}/accounts/${auth?.selectedAccountValue}/balance`,
       {
         headers: {
           Authorization: auth?.token,

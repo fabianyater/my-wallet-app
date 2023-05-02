@@ -6,7 +6,7 @@ import BalanceCard from "../../components/BalanceCard";
 import Table from "../../components/Table";
 
 import AuthContext from "../../context/AuthProvider";
-import { API_URL } from "../../utils/env";
+import { API_URL_DEV } from "../../utils/env";
 
 import styles from "./DashboardStyles.module.css";
 import { DotSpinner } from "@uiball/loaders";
@@ -31,7 +31,7 @@ export default function Dashboard() {
     setIsLoading(true);
 
     try {
-      const response = await fetch(`${API_URL}/accounts/user/${auth?.userId}`, {
+      const response = await fetch(`${API_URL_DEV}/accounts/user/${auth?.userId}`, {
         headers: {
           Authorization: auth?.token,
         },
@@ -53,7 +53,7 @@ export default function Dashboard() {
 
   const fetchTxns = async () => {
     const response = await fetch(
-      `${API_URL}/transactions/account/${auth?.selectedAccountValue}?page=${page}&size=5`,
+      `${API_URL_DEV}/transactions/account/${auth?.selectedAccountValue}?page=${page}&size=5`,
       {
         headers: {
           Authorization: auth?.token,

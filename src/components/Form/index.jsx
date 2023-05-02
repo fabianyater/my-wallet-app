@@ -3,7 +3,7 @@ import { useForm } from "react-hook-form";
 import { Link, useNavigate } from "react-router-dom";
 
 import { AuthContext } from "../../context/AuthProvider";
-import { API_URL } from "../../utils/env";
+import { API_URL_DEV } from "../../utils/env";
 import styles from "./Form.module.css";
 import Button from "../Button";
 import Input from "../Input";
@@ -17,7 +17,7 @@ export default function LoginForm() {
 
   const onSubmit = (data) => {
     setIsLoading(true);
-    const request = fetch(`${API_URL}/auth/login`, {
+    const request = fetch(`${API_URL_DEV}/auth/login`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

@@ -1,7 +1,7 @@
 import React, { useContext, useState } from "react";
 import { useForm } from "react-hook-form";
 import AuthContext from "../../context/AuthProvider";
-import { API_URL } from "../../utils/env";
+import { API_URL_DEV } from "../../utils/env";
 import Button from "../Button";
 import Input from "../Input";
 import styles from "./Account.module.css";
@@ -13,7 +13,7 @@ export default function CreateAccountForm() {
 
   const onSubmit = (data) => {
     setIsLoading(true);
-    fetch(`${API_URL}/accounts/`, {
+    fetch(`${API_URL_DEV}/accounts/`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

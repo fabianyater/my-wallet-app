@@ -5,7 +5,7 @@ import {
   transactionInputOptions,
   transactionTypeOptions,
 } from "../../utils/inputOptions";
-import { API_URL } from "../../utils/env";
+import { API_URL_DEV } from "../../utils/env";
 
 import AuthContext from "../../context/AuthProvider";
 import Button from "../Button";
@@ -78,7 +78,7 @@ export default function CreateTxnForm({ getTxns }) {
     };
 
     try {
-      await axios.post(`${API_URL}/transactions/`, requestData, options);
+      await axios.post(`${API_URL_DEV}/transactions/`, requestData, options);
 
       reset();
       updateAccountBalance(data);
@@ -108,7 +108,7 @@ export default function CreateTxnForm({ getTxns }) {
   };
 
   const fetchCategories = async () => {
-    const response = await fetch(`${API_URL}/categories/`, {
+    const response = await fetch(`${API_URL_DEV}/categories/`, {
       headers: {
         Authorization: auth?.token,
       },
